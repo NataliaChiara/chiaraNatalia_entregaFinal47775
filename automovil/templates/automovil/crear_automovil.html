@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>crear automovil</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+crear automovil
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    <p>
+        marca {{form.marca}}
+    </p>
+    <p>
+        modelo {{form.modelo}}
+    </p>
+    <p>
+        descripcion {{form.descripcion}}
+    </p>
+    <p>
+        fecha de creacion {{form.fecha_creacion}}
+    </p>
+    <p>el formato de la fecha es mes/dia/año</p>
+    <input type="submit" value="Crear">
+</form>
+
+{% endblock main %}
