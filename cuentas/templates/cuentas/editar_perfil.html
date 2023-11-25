@@ -4,10 +4,6 @@
 <title>Editar Perfil</title>
 {% endblock title_head %}
 
-{% block h1_header %}
-Editar Perfil
-{% endblock h1_header %}
-
 {% block main %}
  
 <form action={% url 'editar_perfil' %} method='POST' enctype='multipart/form-data'> {% comment %} IMPORTANTE EL ENCTYPE SI EL FORMULARIO SOPORTA SUBIDA DE IMAGENES(MEDIA) {% endcomment %}

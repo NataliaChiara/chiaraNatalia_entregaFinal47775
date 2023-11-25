@@ -12,7 +12,7 @@
 .nav {
   margin: auto;
   width: 90vw;
-  height: 50px;
+  height: 80px;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-around;
@@ -77,6 +77,9 @@
   border-radius: 100%;
 }
 
+.main-container {
+  margin: 50px 0 150px 0;
+}
 
 .footer {
   position: fixed;
@@ -93,8 +96,45 @@
 
 /* blog */
 
-.lista {
+.header-blog {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.header-blog h1 {
+  font-size: 24px;
+}
+
+.blog-container {
+  background-color: #efefef;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0 ;
+  margin: 50px auto;
+}
+
+.blog-container h2 {
+  font-size: 20px;
+}
+
+.blog-container p, .blog-container a{
+  width: 90%;
   font-size: 16px;
-  color: black !important;
-  text-decoration: none !important;
+  text-align: left;
+}
+
+.blog-container a, .header-blog a {
+  font-size: 16px;
+  color: #5E17EB;
+}
+
+.blog-container a:hover, .header-blog a:hover {
+  transition: 0.2s;
+  font-weight: bold;
 }

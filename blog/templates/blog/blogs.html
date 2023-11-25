@@ -4,20 +4,23 @@
 <title>Blogs</title>
 {% endblock title_head %}
 
-{% block h1_header %}
-Blogs
-{% endblock h1_header %}
-
 {% block main %}
-
-<a href={% url "crear_blog" %}>Crear blog</a>
+<div class='header-blog'>
+    <h1 class'titulo-blog'>Blogs</h1>
+    <a href={% url "crear_blog" %}>Añadir blog</a>
+</div>
 
 {% if listado_de_blogs %}
-<ul>
+
     {% for blog in listado_de_blogs %}
-    <li><a class='lista' href={% url 'detalle_blog' blog.id %}>{{blog}}</a> | <a href={% url 'actualizar_blog' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_blog' blog.id %}>Eliminar</a></li>
+    {% comment %} <li><a class='lista' href={% url 'detalle_blog' blog.id %}>{{blog}}</a> | <a href={% url 'actualizar_blog' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_blog' blog.id %}>Eliminar</a></li> {% endcomment %}
+    <div class='blog-container'>
+        <h2>{{blog.titulo}}</h2>
+        <p>{{blog.descripcion}}</p>
+        <a href={% url 'detalle_blog' blog.id %}>Ver más</a>
+    </div>
     {% endfor %}
-</ul>
+
 {% else %}
 <p>No se encontraron blogs.</p>
 {% endif %}

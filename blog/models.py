@@ -4,7 +4,7 @@ from django.db import models
 class Blog(models.Model):
     titulo= models.CharField(max_length=30)
     autor= models.CharField(max_length=30)
-    descripcion= models.CharField(max_length=250)
+    descripcion= models.CharField(max_length=500)
     fecha_creacion= models.DateField()
 
     def __str__(self):

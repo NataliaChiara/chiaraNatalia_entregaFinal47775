@@ -4,16 +4,11 @@
 <title>paletas</title>
 {% endblock title_head %}
 
-{% block h1_header %}
-Paletas
-{% endblock h1_header %}
-
 {% block main %}
 
 <a href={% url "crear_paleta" %}>Crear paleta</a>
 
 <form action="">
-    {% comment %} <input type="text" name="marca"> {% endcomment %}
     {{formulario}}
     <input type="submit" value='Buscar'>
 </form>
