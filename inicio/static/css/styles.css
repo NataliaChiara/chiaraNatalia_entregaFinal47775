@@ -7,6 +7,8 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* layout */
+
 .nav {
   margin: auto;
   width: 90vw;
@@ -87,4 +89,12 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+/* blog */
+
+.lista {
+  font-size: 16px;
+  color: black !important;
+  text-decoration: none !important;
 }

@@ -15,7 +15,7 @@ Blogs
 {% if listado_de_blogs %}
 <ul>
     {% for blog in listado_de_blogs %}
-    <li><a href={% url 'detalle_blog' blog.id %}>{{blog}}</a> | <a href={% url 'actualizar_blog' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_blog' blog.id %}>Eliminar</a></li>
+    <li><a class='lista' href={% url 'detalle_blog' blog.id %}>{{blog}}</a> | <a href={% url 'actualizar_blog' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_blog' blog.id %}>Eliminar</a></li>
     {% endfor %}
 </ul>
 {% else %}
