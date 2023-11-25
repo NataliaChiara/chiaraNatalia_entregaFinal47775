@@ -6,11 +6,16 @@
 
 {% block main %}
 
-<ul>
-    <li>titulo: {{blog.titulo}}</li>
-    <li>Autor: {{blog.autor}}</li>
-    <li>Descripcion: {{blog.descripcion}}</li>
-    <li>Fecha de creacion: {{blog.fecha_creacion}}</li>
-</ul>
+<div class='blog-container'>
+    <h2>{{blog.titulo}} - {{blog.autor}} - {{blog.fecha_creacion}}</h2>
+    <p>{{blog.descripcion}}</p>
+    {% if request.user.is_authenticated %}
+    <div class='links-detalle-blog'>
+        <a href={% url 'actualizar_blog' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_blog' blog.id %}>Eliminar</a>
+    </div>
+    {% endif %}
+</div>
+
+
 
 {% endblock main %}
