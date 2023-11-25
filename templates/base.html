@@ -15,7 +15,6 @@
     <body>
         <nav class='nav'>
             <a class='link' href={% url "inicio" %}>Home</a>
-            
             <a class='link' href={% url "blogs" %}>Blogs</a>
             {% if not request.user.is_authenticated %}
             <a class='boton-primario' href="{% url 'login' %}">Iniciar sesión</a>

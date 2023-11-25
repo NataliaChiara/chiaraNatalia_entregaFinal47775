@@ -94,6 +94,21 @@
   gap: 50px;
 }
 
+
+/* inicio */
+
+.imagen-bienvenida {
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+}
+
+.imagen-bienvenida img {
+  width: 70vw;
+  height: 50vh;
+  object-fit: contain;
+}
+
 /* blog */
 
 .header-blog {

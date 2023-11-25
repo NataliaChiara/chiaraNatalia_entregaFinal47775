@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title_head %}
 <title>inicio</title>
@@ -6,6 +7,8 @@
 
 {% block main %}
 
-<h1>inicio</h1>
+    <div class='imagen-bienvenida'>
+        <img src={% static "assets/bienvenido.jpg" %} alt="image">
+    </div>
 
 {% endblock main %}

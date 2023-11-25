@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm 
 from django.contrib.auth import authenticate, login as django_login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm 
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-
 from cuentas.forms import MiFormularioDeCreacion, EdicionPerfil
-
 from cuentas.models import DatosExtra
 
 def login(request):
@@ -13,14 +12,13 @@ def login(request):
 
     if request.method == 'POST':
         formulario = AuthenticationForm(request, data=request.POST)
+
         if formulario.is_valid():
             usuario = formulario.cleaned_data.get('username')
             contrasenia = formulario.cleaned_data.get('password')
             user = authenticate(username=usuario, password=contrasenia)
             django_login(request, user)
-
             DatosExtra.objects.get_or_create(user=request.user)
-
             return redirect('inicio')
         
     return render(request, 'cuentas/login.html', {'formulario': formulario})
@@ -36,6 +34,7 @@ def registro(request):
 
     return render (request, 'cuentas/registro.html', {'formulario': formulario})
 
+@login_required
 def editar_perfil(request):
     datos_extra = request.user.datosextra
     formulario= EdicionPerfil( initial={'biografia': datos_extra.biografia, 'avatar': datos_extra.avatar}, instance=request.user)
@@ -59,6 +58,7 @@ def editar_perfil(request):
         
     return render(request, 'cuentas/editar_perfil.html', {'formulario': formulario})
 
+@login_required
 def detalle_perfil(request):
     datos_extra = request.user.datosextra
     return render(request, 'cuentas/detalle_perfil.html', {'datos_extra': datos_extra})
