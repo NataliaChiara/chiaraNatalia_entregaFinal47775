@@ -21,13 +21,13 @@
             <a class='boton-primario' href="{% url 'login' %}">Iniciar sesión</a>
             <a class='boton-secundario' href="{% url 'registro' %}">Registrarse</a>
             {% else %}
-            <a class='link-perfil' href={% url 'editar_perfil' %}>
-                {% if request.user.datosextra.avatar %}
+            <a class='boton-primario' href={% url 'editar_perfil' %}>
+                {% comment %} {% if request.user.datosextra.avatar %}
                     <img class='avatar' src={{request.user.datosextra.avatar.url}} alt="avatar">
-                {% endif %}
-                {{request.user.username}}
+                {% endif %} {% endcomment %}
+                Editar Perfil
             </a>
-            <a class='boton-primario' href="{% url 'logout' %}">Cerrar sesión</a>
+            <a class='boton-secundario' href="{% url 'logout' %}">Cerrar sesión</a>
             {% endif %}      
         </nav>
 

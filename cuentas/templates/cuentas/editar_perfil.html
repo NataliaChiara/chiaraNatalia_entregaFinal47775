@@ -5,14 +5,16 @@
 {% endblock title_head %}
 
 {% block main %}
- 
-<form action={% url 'editar_perfil' %} method='POST' enctype='multipart/form-data'> {% comment %} IMPORTANTE EL ENCTYPE SI EL FORMULARIO SOPORTA SUBIDA DE IMAGENES(MEDIA) {% endcomment %}
-    {% csrf_token %}
-    <table>
-        {{formulario}}
-    </table>
-    <input type="submit" value="Editar Perfil">
-</form>
-<a href={% url 'editar_password' %}>Editar password</a>
+
+<div class='container-editar-perfil'>
+    <form action={% url 'editar_perfil' %} method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+        <table>
+            {{formulario}}
+        </table>
+        <input type="submit" value="Editar Perfil">
+    </form>
+    <a href={% url 'editar_password' %}>Editar password</a>
+</div>
 
 {% endblock main %}

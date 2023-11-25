@@ -145,3 +145,13 @@
 .links-detalle-blog {
   width: 90%;
 }
+
+/* editar perfil form */
+
+.container-editar-perfil {
+  background-color: #efefef;
+  width: fit-content;
+  padding: 50px;
+  border-radius: 15px;
+  margin: auto;
+}

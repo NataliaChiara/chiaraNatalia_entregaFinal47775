@@ -37,7 +37,7 @@ def registro(request):
     return render (request, 'cuentas/registro.html', {'formulario': formulario})
 
 def editar_perfil(request):
-    datos_extra = request.user.datosextra # IMPORTANTE MINUSCULAS
+    datos_extra = request.user.datosextra
     formulario= EdicionPerfil( initial={'biografia': datos_extra.biografia, 'avatar': datos_extra.avatar}, instance=request.user)
 
     if request.method == 'POST':
