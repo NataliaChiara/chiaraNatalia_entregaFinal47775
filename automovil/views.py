@@ -15,13 +15,13 @@ class CrearAutomovil(LoginRequiredMixin, CreateView):
     model = Blog
     template_name = 'blog/crear_blog.html'
     fields= ['titulo', 'autor', 'descripcion', 'fecha_creacion']
-    success_url = reverse_lazy('automoviles')
+    success_url = reverse_lazy('blogs')
 
 class ActualizarAutomovil(LoginRequiredMixin, UpdateView):
     model = Blog
     template_name = 'blog/actualizar_blog.html'
     fields= ['titulo', 'autor', 'descripcion', 'fecha_creacion']
-    success_url = reverse_lazy('automoviles')
+    success_url = reverse_lazy('blogs')
 
 class DetalleAutomovil(DetailView):
     model = Blog
@@ -30,4 +30,4 @@ class DetalleAutomovil(DetailView):
 class EliminarAutomovil(LoginRequiredMixin, DeleteView):
     model = Blog
     template_name = 'blog/eliminar_blog.html'
-    success_url = reverse_lazy('automoviles')
+    success_url = reverse_lazy('blogs')
