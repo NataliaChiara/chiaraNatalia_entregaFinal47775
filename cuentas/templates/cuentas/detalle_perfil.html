@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Detalle perfil</title>
+{% endblock title_head %}
+
+{% block main %}
+    <p>{{datos_extra.user}}</p>
+    <p>{{datos_extra.biografia}}</p>
+    <img class='avatar' src={{datos_extra.avatar.url}} alt="avatar">
+{% endblock main %}
