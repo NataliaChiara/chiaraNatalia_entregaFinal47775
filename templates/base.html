@@ -14,12 +14,12 @@
     </head>
     <body>
         <nav class='nav'>
-            <a href={% url "inicio" %}>Inicio</a>
-            <a href={% url "paletas" %}>Paletas</a>
-            <a href={% url "automoviles" %}>Autos</a>
+            <a class='link' href={% url "inicio" %}>Home</a>
+            <a class='link'>Acerca de mi</a>
+            <a class='link'>Blog</a>
             {% if not request.user.is_authenticated %}
-            <a href="{% url 'login' %}">Iniciar sesión</a>
-            <a href="{% url 'registro' %}">Registrarse</a>
+            <a class='boton-primario' href="{% url 'login' %}">Iniciar sesión</a>
+            <a class='boton-secundario' href="{% url 'registro' %}">Registrarse</a>
             {% else %}
             <a href={% url 'editar_perfil' %}>
                 {% if request.user.datosextra.avatar %}
@@ -27,7 +27,7 @@
                 {% endif %}
                 {{request.user.username}}
             </a>
-            <a href="{% url 'logout' %}">Cerrar sesión</a>
+            <a class='boton-primario' href="{% url 'logout' %}">Cerrar sesión</a>
             {% endif %}      
         </nav>
 
@@ -36,7 +36,7 @@
             {% block main %}{% endblock main %}
         </main>
 
-        <footer>
+        <footer class='footer'>
            <a href='https://www.linkedin.com/in/natalia-chiara-792a84199/'>linkedin</a>
            <a href='https://github.com/NataliaChiara'>github</a>
         </footer>
