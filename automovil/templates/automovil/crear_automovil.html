@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>crear automovil</title>
+<title>Crear blog</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-crear automovil
+Crear blog
 {% endblock h1_header %}
 
 {% block main %}
@@ -13,16 +13,16 @@ crear automovil
 <form action="" method='POST'>
     {% csrf_token %}
     <p>
-        marca {{form.marca}}
+        Titulo {{form.titulo}}
     </p>
     <p>
-        modelo {{form.modelo}}
+        Autor {{form.autor}}
     </p>
     <p>
-        descripcion {{form.descripcion}}
+        Descripcion {{form.descripcion}}
     </p>
     <p>
-        fecha de creacion {{form.fecha_creacion}}
+        Fecha de creacion {{form.fecha_creacion}}
     </p>
     <p>el formato de la fecha es mes/dia/año</p>
     <input type="submit" value="Crear">

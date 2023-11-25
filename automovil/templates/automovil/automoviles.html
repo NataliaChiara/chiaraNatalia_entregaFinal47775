@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>Automoviles</title>
+<title>Blogs</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Automoviles
+Blogs
 {% endblock h1_header %}
 
 {% block main %}
 
-<a href={% url "crear_automovil" %}>Crear automovil</a>
+<a href={% url "crear_automovil" %}>Crear blog</a>
 
-{% if listado_de_automoviles %}
+{% if listado_de_blogs %}
 <ul>
-    {% for automovil in listado_de_automoviles %}
-    <li><a href={% url 'detalle_automovil' automovil.id %}>{{automovil}}</a> | <a href={% url 'actualizar_automovil' automovil.id %}>Actualizar</a> | <a href={% url 'eliminar_automovil' automovil.id %}>Eliminar</a></li>
+    {% for blog in listado_de_blogs %}
+    <li><a href={% url 'detalle_automovil' blog.id %}>{{blog}}</a> | <a href={% url 'actualizar_automovil' blog.id %}>Actualizar</a> | <a href={% url 'eliminar_automovil' blog.id %}>Eliminar</a></li>
     {% endfor %}
 </ul>
 {% else %}
-<p>No se encontraron automoviles.</p>
+<p>No se encontraron blogs.</p>
 {% endif %}
 
 

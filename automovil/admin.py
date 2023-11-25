@@ -1,5 +1,5 @@
 from django.contrib import admin
-from automovil.models import Automovil
+from automovil.models import Blog
 
-admin.site.register(Automovil)
+admin.site.register(Blog)
 # Register your models here.

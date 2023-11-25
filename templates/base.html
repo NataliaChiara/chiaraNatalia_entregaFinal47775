@@ -16,7 +16,7 @@
         <nav class='nav'>
             <a class='link' href={% url "inicio" %}>Home</a>
             <a class='link'>Acerca de mi</a>
-            <a class='link'>Blog</a>
+            <a class='link' href={% url "automoviles" %}>Blogs</a>
             {% if not request.user.is_authenticated %}
             <a class='boton-primario' href="{% url 'login' %}">Iniciar sesión</a>
             <a class='boton-secundario' href="{% url 'registro' %}">Registrarse</a>

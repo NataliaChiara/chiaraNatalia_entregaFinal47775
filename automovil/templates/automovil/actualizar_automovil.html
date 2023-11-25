@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>Actualizar automovil</title>
+<title>Actualizar blog</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Actualizar automovil
+Actualizar blog
 {% endblock h1_header %}
 
 {% block main %}
@@ -13,7 +13,6 @@ Actualizar automovil
 <form action="" method='POST'>
     {% csrf_token %}
     {{form}}
-    {% comment %} IMPORTANTE PONER FORM {% endcomment %}
     <input type="submit" value="Actualizar">
 </form>
 {% endblock main %}

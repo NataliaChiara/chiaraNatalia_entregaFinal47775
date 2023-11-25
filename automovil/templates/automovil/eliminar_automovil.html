@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>Eliminar automovil</title>
+<title>Eliminar blog</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Eliminar automovil
+Eliminar blog
 {% endblock h1_header %}
 
 {% block main %}
 
 <form action="" method='POST'>
     {% csrf_token %}
-    <p>Desea eliminar el automovil {{automovil.marca}}?</p>
+    <p>Desea eliminar el blog {{blog.titulo}}?</p>
     <input type="submit" value="Confirmar">
 </form>
 
