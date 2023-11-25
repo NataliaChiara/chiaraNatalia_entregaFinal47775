@@ -121,6 +121,7 @@
 
 .blog-container h2 {
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .blog-container p, .blog-container a{
