@@ -9,25 +9,25 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class ListadoAutomoviles(ListView):
     model = Blog
     context_object_name = 'listado_de_blogs'
-    template_name = 'automovil/automoviles.html'
+    template_name = 'blog/blogs.html'
 
 class CrearAutomovil(LoginRequiredMixin, CreateView):
     model = Blog
-    template_name = 'automovil/crear_automovil.html'
+    template_name = 'blog/crear_blog.html'
     fields= ['titulo', 'autor', 'descripcion', 'fecha_creacion']
     success_url = reverse_lazy('automoviles')
 
 class ActualizarAutomovil(LoginRequiredMixin, UpdateView):
     model = Blog
-    template_name = 'automovil/actualizar_automovil.html'
+    template_name = 'blog/actualizar_blog.html'
     fields= ['titulo', 'autor', 'descripcion', 'fecha_creacion']
     success_url = reverse_lazy('automoviles')
 
 class DetalleAutomovil(DetailView):
     model = Blog
-    template_name = 'automovil/detalle_automovil.html'
+    template_name = 'blog/detalle_blog.html'
 
 class EliminarAutomovil(LoginRequiredMixin, DeleteView):
     model = Blog
-    template_name = 'automovil/eliminar_automovil.html'
+    template_name = 'blog/eliminar_blog.html'
     success_url = reverse_lazy('automoviles')
