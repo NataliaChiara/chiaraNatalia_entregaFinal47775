@@ -1,5 +1,5 @@
 from django.urls import path
-from automovil.views import ListadoBlogs, CrearBlog, ActualizarBlog, EliminarBlog, DetalleBlog
+from blog.views import ListadoBlogs, CrearBlog, ActualizarBlog, EliminarBlog, DetalleBlog
 
 urlpatterns = [
     path('blogs/', ListadoBlogs.as_view(), name='blogs'),
