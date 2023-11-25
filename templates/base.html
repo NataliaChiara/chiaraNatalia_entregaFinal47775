@@ -21,9 +21,9 @@
             <a class='boton-primario' href="{% url 'login' %}">Iniciar sesión</a>
             <a class='boton-secundario' href="{% url 'registro' %}">Registrarse</a>
             {% else %}
-            <a href={% url 'editar_perfil' %}>
+            <a class='link-perfil' href={% url 'editar_perfil' %}>
                 {% if request.user.datosextra.avatar %}
-                    <img src={{request.user.datosextra.avatar.url}} height='40px' alt="avatar">
+                    <img class='avatar' src={{request.user.datosextra.avatar.url}} alt="avatar">
                 {% endif %}
                 {{request.user.username}}
             </a>
