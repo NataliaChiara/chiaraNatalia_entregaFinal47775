@@ -5,7 +5,12 @@
 {% endblock title_head %}
 
 {% block main %}
-    <p>{{datos_extra.user}}</p>
-    <p>{{datos_extra.biografia}}</p>
-    <img class='avatar' src={{datos_extra.avatar.url}} alt="avatar">
+<div class='perfil-container'>
+    <img class='perfil-imagen' src={{datos_extra.avatar.url}} alt="avatar">
+    <div class='perfil-textos'>
+        <h1>{{datos_extra.user}}</h1>
+        <p>{{datos_extra.biografia}}</p>
+    </div>
+</div>
+ 
 {% endblock main %}
