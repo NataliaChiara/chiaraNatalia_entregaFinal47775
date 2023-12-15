@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title_head %}
+<title>Acerca de mi</title>
+{% endblock title_head %}
+
+{% block main %}
+
+    <div class='acerca-container'>
+        <img class='acerca-imagen' src={% static "assets/perfil.jpg" %} alt="image">
+        <div class='acerca-textos'>
+            <h1>hola, mi nombre es<br/>NATALIA CHIARA</h1>
+            <p>Tengo 25 años, soy de Argentina y soy front-end developer desde diciembre de 2022. Mi stack principal es Typescript y Next pero aprendi con Javascript y React y actualmente estoy sumando Python y Django.</p>
+        </div>
+    </div>
+
+{% endblock main %}

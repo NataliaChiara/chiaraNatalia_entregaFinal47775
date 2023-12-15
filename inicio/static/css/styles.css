@@ -161,6 +161,34 @@
   width: 90%;
 }
 
+/* acerca de mi */
+.acerca-container {
+  background-color: #efefef;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  gap: 30px;
+  padding: 40px 0 ;
+  margin: 50px auto;
+}
+
+.acerca-imagen {
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.acerca-textos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #5E17EB;
+}
+
+
 /* editar perfil form */
 
 .container-editar-perfil {
