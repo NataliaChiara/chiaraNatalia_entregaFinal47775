@@ -11,4 +11,10 @@
     {{form}}
     <input type="submit" value="Actualizar">
 </form>
+
+ {# Incluye los archivos de CKEditor #}
+ {% load static %}
+ <script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+ <script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
 {% endblock main %}

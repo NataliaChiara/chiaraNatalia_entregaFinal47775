@@ -5,7 +5,6 @@
 {% endblock title_head %}
 
 {% block main %}
-
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
@@ -13,4 +12,8 @@
     </form>
     <p>el formato de la fecha es mes/dia/año</p>
 
+    {# Incluye los archivos de CKEditor #}
+    {% load static %}
+    <script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+    <script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
 {% endblock main %}
