@@ -16,9 +16,14 @@
 
     {% for blog in listado_de_blogs %}
     <div class='blog-container'>
-        <h2>{{blog.titulo}}</h2>
-        <p>{{blog.descripcion}}</p>
-        <a href={% url 'detalle_blog' blog.id %}>Ver más</a>
+        {% if blog.image %}
+            <img src="{{ blog.image.url }}" alt="{{ blog.titulo }} Image">
+        {% endif %}
+        <div>
+            <h2>{{blog.titulo}}</h2>
+            <p>{{blog.descripcion}}</p>
+            <a href={% url 'detalle_blog' blog.id %}>Ver más</a>
+        </div>
     </div>
     {% endfor %}
 

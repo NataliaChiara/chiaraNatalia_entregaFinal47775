@@ -6,22 +6,11 @@
 
 {% block main %}
 
-<form action="" method='POST'>
-    {% csrf_token %}
-    <p>
-        Titulo {{form.titulo}}
-    </p>
-    <p>
-        Autor {{form.autor}}
-    </p>
-    <p>
-        Descripcion {{form.descripcion}}
-    </p>
-    <p>
-        Fecha de creacion {{form.fecha_creacion}}
-    </p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
     <p>el formato de la fecha es mes/dia/año</p>
-    <input type="submit" value="Crear">
-</form>
 
 {% endblock main %}

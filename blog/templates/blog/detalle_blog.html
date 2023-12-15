@@ -6,7 +6,10 @@
 
 {% block main %}
 
-<div class='blog-container'>
+<div class='blog-detalle-container'>
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" alt="{{ blog.titulo }} Image">
+    {% endif %}
     <h2>{{blog.titulo}} - {{blog.autor}} - {{blog.fecha_creacion}}</h2>
     <p>{{blog.descripcion}}</p>
     {% if request.user.is_authenticated %}
